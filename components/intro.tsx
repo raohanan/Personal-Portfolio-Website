@@ -10,8 +10,9 @@ import { FaGithubSquare } from "react-icons/fa";
 export default function Intro() {
   return (
     <section
+    id="home"
       className="mb-28 max-w-[50rem]
-    text-center sm:mb-0"
+    text-center sm:mb-0 scroll-mt-96"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -76,7 +77,7 @@ export default function Intro() {
           href="#contact"
           className="group bg-gray-950 text-white px-7
         py-3 flex items-center gap-2 rounded-full
-        outline-none focus-within:scale-110 hover:scale-110
+        outline-none focus:scale-110 hover:scale-110
         hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here
@@ -84,31 +85,35 @@ export default function Intro() {
         </Link>
 
         <a
-          href=""
+          href="/CV.pdf"
+          download
           className="group bg-white px-7
         py-3 flex items-center gap-2 rounded-full
-        outline-none focus-within:scale-110 hover:scale-110
-        hactive:scale-105 transition"
+        outline-none focus:scale-110 hover:scale-110
+        hactive:scale-105 transition 
+        cursor-pointer "
         >
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
         <a
-          href=""
+          href="https://www.linkedin.com/in/abdul-hanan-17b69623a"
+          target="_blank"
           className="bg-white p-4 text-gray-700
         flex items-center gap-2 rounded-full text-[1.15rem]
-        outline-none focus-within:scale-110 hover:scale-110
+        outline-none focus:scale-[1.15] hover:text-gray-950 hover:scale-[1.15]
         active:scale-105 transition"
         >
           <BsLinkedin />
         </a>
 
         <a
-          href=""
+          href="https://github.com/raohanan"
+          target="_blank"
           className="bg-white p-4 text-gray-700
         flex items-center gap-2 rounded-full text-[1.35rem]
-        outline-none focus-within:scale-110 hover:scale-110
+        outline-none focus:scale-[1.15] hover:text-gray-950 hover:scale-[1.15]
         active:scale-105 transition"
         >
           <FaGithubSquare />
