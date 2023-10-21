@@ -12,7 +12,7 @@ export default function Experience() {
   return (
     <section id="experience">
       <SectionHeading>my experience</SectionHeading>
-      <VerticalTimeline>
+      <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -26,10 +26,16 @@ export default function Experience() {
             contentArrowStyle={{
               borderRight:"7px solid #f3f4f6",
             }}
+            date={item.date}
+            icon={item.icon}
+            iconStyle={{
+              background:"white",
+              fontSize:"1.5rem",
+            }}
             >
-              <h3>{item.title}</h3>
-              <h3>{item.location}</h3>
-              <h3>{item.description}</h3>
+              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <p className="font-normal !mt-o">{item.location}</p>
+              <p className="!mt-1 !font-normal text-gray-700">{item.description}</p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
